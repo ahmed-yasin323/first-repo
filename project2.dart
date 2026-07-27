@@ -13,10 +13,10 @@ void q1() {
   }
 }
 
-// Q2 
+// Q2
 void q2() {
   List<String> fruits = ['apple', 'banana', 'mango', 'kiwi'];
-  
+
   for (int i = 0; i < fruits.length; i++) {
     print("$i : ${fruits[i]}");
   }
@@ -24,12 +24,12 @@ void q2() {
 
 void q3() {
   List<int> scores = [55, 82, 90, 43, 77];
-  
+
   int sum = 0;
   for (int i = 0; i < scores.length; i++) {
     sum += scores[i];
   }
-  
+
   double average = sum / scores.length;
   print("Sum: $sum");
   print("Average: $average");
@@ -37,26 +37,22 @@ void q3() {
 
 // Q4 -
 void q4() {
-  Map<String, int> ages = {
-    'Sara': 20,
-    'Omar': 23,
-    'Laila': 19
-  };
-  
+  Map<String, int> ages = {'Sara': 20, 'Omar': 23, 'Laila': 19};
+
   for (var entry in ages.entries) {
     print("${entry.key} is ${entry.value} years old");
   }
 }
 
-// Q5 - 
+// Q5 -
 void q5() {
   List<int> numbers = [12, 45, 3, 89, 21, 67];
-  
+
   if (numbers.isEmpty) {
     print("The list is empty!");
     return;
   }
-  
+
   int max = numbers[0];
   for (int i = 1; i < numbers.length; i++) {
     if (numbers[i] > max) {
@@ -73,10 +69,9 @@ void q6() {
     {'name': 'Pen', 'price': 5},
     {'name': 'Bag', 'price': 120},
   ];
-  
+
   int total = 0;
   for (var product in products) {
-    
     int? price = product['price'] as int?;
     if (price != null) {
       print("${product['name']} : $price");
@@ -94,12 +89,12 @@ void bonus() {
     {'name': 'Pen', 'price': 5, 'qty': 10},
     {'name': 'Bag', 'price': 120, 'qty': 1},
   ];
-  
+
   int grandTotal = 0;
   for (var product in productsBonus) {
     int? price = product['price'] as int?;
     int? qty = product['qty'] as int?;
-    
+
     if (price != null && qty != null) {
       int itemCost = price * qty;
       grandTotal += itemCost;
@@ -110,7 +105,8 @@ void bonus() {
   }
   print("Grand total: $grandTotal");
 }
-//  
+
+//
 void main() {
   print("=== Q1: FizzBuzz ===");
   q1();
